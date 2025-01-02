@@ -18,10 +18,13 @@ export default tseslint.config(
     },
   },
   {
-    files: ['**/*.ts'],
+    files: ['src/**/*.ts'],
     extends: [tseslint.configs.disableTypeChecked],
     rules: {
-      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_' },
+      ],
     },
   },
 );
