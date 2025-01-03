@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from 'express';
-import TodoService from '@services/todos';
+
 import { RequestBody, RequestParams } from '@models/todos';
+
+import TodoService from '@services/todos';
 
 // Get All TODOS
 export const findAll = async (

@@ -1,5 +1,6 @@
 import { Router } from 'express';
-import { findOne, findAll, create, update, remove } from '@controllers/todos';
+
+import { create, findAll, findOne, remove, update } from '@controllers/todos';
 
 const router = Router();
 
