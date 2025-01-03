@@ -1,7 +1,10 @@
 import express, { Express } from 'express';
+
 import dotenv from 'dotenv';
-import todosRoutes from '@routes/todos';
+
 import ErrorMiddleware from '@middleware/error';
+
+import todosRoutes from '@routes/todos';
 
 dotenv.config();
 const port = process.env.PORT || 3000;

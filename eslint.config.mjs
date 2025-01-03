@@ -22,7 +22,7 @@ export default tseslint.config(
     extends: [tseslint.configs.disableTypeChecked],
     rules: {
       '@typescript-eslint/no-unused-vars': [
-        'warn',
+        'error',
         { argsIgnorePattern: '^_' },
       ],
     },

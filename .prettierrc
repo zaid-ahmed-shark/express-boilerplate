@@ -12,5 +12,20 @@
         "parser": "json"
       }
     }
-  ]
+  ],
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "^express$",
+    "^dotenv$",
+    "^@controllers/(.*)$",
+    "^@middleware/(.*)$",
+    "^@models/(.*)$",
+    "^@routes/(.*)$",
+    "^@services/(.*)$",
+    "^@utils/(.*)$",
+    "^[./]"
+  ],
+
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }
