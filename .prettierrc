@@ -15,8 +15,11 @@
   ],
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrder": [
+    "^path$",
     "^express$",
     "^dotenv$",
+    "^morgan$",
+    "^rotating-file-stream$",
     "^@controllers/(.*)$",
     "^@middleware/(.*)$",
     "^@models/(.*)$",

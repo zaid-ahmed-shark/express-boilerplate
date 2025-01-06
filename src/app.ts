@@ -3,12 +3,16 @@ import express, { Express } from 'express';
 import dotenv from 'dotenv';
 
 import ErrorMiddleware from '@middleware/error';
+import SetupLogging from '@middleware/logging';
 
 import todosRoutes from '@routes/todos';
 
 dotenv.config();
 const port = process.env.PORT || 3000;
 const app: Express = express();
+
+// This is the logging middleware
+SetupLogging(app);
 
 // This is the body parser middleware
 app.use(express.json());
