@@ -22,9 +22,8 @@ const findOne = async (params: RequestParams) => {
   const todo = todos.find((todoItem) => todoItem.id === params.id);
   // if doesn't exist, throw an error
   if (!todo) {
-    throw AppError(401, 'Todo not found');
+    throw AppError('services/todos.ts', 401, 'Todo not found');
   }
-
   return todo;
 };
 
@@ -35,14 +34,14 @@ const update = async (params: RequestParams, body: RequestBody) => {
     todos[todoIndex] = { id: todos[todoIndex].id, title: body.title };
     return todos;
   }
-  throw AppError(401, 'Todo not found');
+  throw AppError('services/todos.ts', 401, 'Todo not found');
 };
 
 const remove = async (params: RequestParams) => {
   const todo = todos.find((todoItem) => todoItem.id === params.id);
   // if doesn't exist, throw an error
   if (!todo) {
-    throw AppError(401, 'Todo not found');
+    throw AppError('services/todos.ts', 401, 'Todo not found');
   }
   todos = todos.filter((todoItem) => todoItem.id !== params.id);
   return todos;

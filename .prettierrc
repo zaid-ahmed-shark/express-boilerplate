@@ -17,6 +17,8 @@
   "importOrder": [
     "^express$",
     "^dotenv$",
+    "^winston$",
+    "^winston-daily-rotate-file$",
     "^@controllers/(.*)$",
     "^@middleware/(.*)$",
     "^@models/(.*)$",
